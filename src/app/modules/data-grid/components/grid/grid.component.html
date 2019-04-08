@@ -1,0 +1,8 @@
+<ag-grid-angular #agGrid class="ag-theme-material" [gridOptions]="gridOptions" [rowData]="data" [columnDefs]="columnDefs"
+  [frameworkComponents]="frameworkComponents" [localeText]="localeText" [pagination]="pagination" [paginationPageSize]="lengthPagination"
+  enableColResize enableSorting enableFilter domLayout='autoHeight' (gridReady)="onGridReady($event)" *ngIf="data && data.length > 0">
+</ag-grid-angular>
+
+<div class="info" *ngIf="!data || data.length === 0">
+  <span class='info-bold'>No data</span>
+</div>
