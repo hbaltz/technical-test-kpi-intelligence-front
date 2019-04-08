@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ColDef } from 'ag-grid';
+import { ColDef } from 'ag-grid-community';
 
 /**
  * Manage data config for the grid
@@ -40,12 +40,12 @@ export class GetConfigService {
     columnDefs.push(this.getColNumbConfig('Latitude','latitude'));
     columnDefs.push(this.getColNumbConfig('Longitude','longitude'));
     columnDefs.push(this.getStringConfig('Etat d\'avancement', 'etat_d_avancement'));
-    columnDefs.push(this.getStringConfig('Montant des AP votés en M€', 'montant_des_ap_votes_en_meu'));
+    columnDefs.push(this.getColNumbConfig('Montant des AP votés en M€', 'montant_des_ap_votes_en_meu'));
     columnDefs.push(this.getStringConfig('CAO attribution' ,'cao_attribution'));
     columnDefs.push(this.getStringConfig('Maîtrise d\'œuvre', 'maitrise_d_oeuvre'));
     columnDefs.push(this.getStringConfig('Mode de dévolution', 'mode_de_devolution'));
-    columnDefs.push(this.getStringConfig('Année d\'individualisation', 'annee_d_individualisation'));
-    columnDefs.push(this.getStringConfig('Enveloppe prév en M€', 'enveloppe_prev_en_meu'));
+    columnDefs.push(this.getColNumbConfig('Année d\'individualisation', 'annee_d_individualisation'));
+    columnDefs.push(this.getColNumbConfig('Enveloppe prév en M€', 'enveloppe_prev_en_meu'));
 
     return columnDefs;
   }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { AgGridModule } from 'ag-grid-angular';
 import { DataGridModule } from './modules/data-grid/data-grid.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DataGridModule } from './modules/data-grid/data-grid.module';
     BrowserModule,
     AppRoutingModule,
     AgGridModule.withComponents(null),
-    DataGridModule
+    DataGridModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

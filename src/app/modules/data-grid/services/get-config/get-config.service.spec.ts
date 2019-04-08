@@ -1,13 +1,12 @@
 import { inject, TestBed } from '@angular/core/testing';
-import { ApiService } from 'services/api/api.service';
-import { ApiServiceStub } from 'stub/ApiServiceStub';
+import { GetConfigService } from './get-config.service';
+import { AppModule } from 'src/app/app.module';
 
 
 describe('GetConfigService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule],
-      providers: [{ provide: ApiService, useClass: ApiServiceStub }]
+      imports: [AppModule]
     });
   });
 

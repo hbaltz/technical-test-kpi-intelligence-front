@@ -1,5 +1,5 @@
 import { ElementRef, Input, OnInit } from '@angular/core';
-import { AgGridEvent, ColDef, GridApi, GridOptions } from 'ag-grid';
+import { AgGridEvent, ColDef, GridApi, GridOptions } from 'ag-grid-community';
 
 /**
  * Parent of data-grid classes

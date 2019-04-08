@@ -1,7 +1,8 @@
 import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { DataGridComponent } from '../../data-grid.component';
-import { GridOptions } from 'ag-grid';
+import { GridOptions } from 'ag-grid-community';
 import { GetConfigService } from '../../services/get-config/get-config.service';
+import { Investment } from 'src/app/model/investment/investment';
 
 /**
  * Composant gérant les différentes grilles de l'application
@@ -22,7 +23,7 @@ export class GridComponent extends DataGridComponent implements OnChanges {
    *
    * @memberof GridComponent
    */
-  @Input() public data;
+  @Input() public data: Investment[];
 
   /**
    * When do we start the pagination
