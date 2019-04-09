@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Investment } from 'src/app/model/investment/investment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  apiURL: string = 'http://localhosts:5000/api';
+  apiURL: string = 'http://localhost:5000/api';
 
   constructor(private httpClient: HttpClient) { }
 
