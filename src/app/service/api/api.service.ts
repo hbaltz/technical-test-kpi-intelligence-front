@@ -41,6 +41,6 @@ export class ApiService {
    * @param url the url of the api
    */
   public getInvestmentsById(id: number){
-      return this.httpClient.get(`${this.apiURL}/investment/${id}`);
+      return this.httpClient.get<Investment>(`${this.apiURL}/investment/${id}`);
   }
 }

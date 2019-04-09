@@ -1,0 +1,23 @@
+<div class="center"><mat-spinner *ngIf="loading"></mat-spinner></div>
+<div class="ficheInfo" *ngIf="Investment">
+    <h1>Fiche investiment n°{{ Investment.id }}</h1>
+    <p class="fiche-text text-center"> <span class="label">Identifiant:</span> {{ Investment.id }}</p>
+    <p class="fiche-text text-center">Code UAI: {{ Investment.codeuai }}</p>
+    <p class="fiche-text text-center">Opération: {{ Investment.titreoperation }}</p>
+    <p class="fiche-text text-center">Entreprise: {{ Investment.entreprise }}</p>
+    <p class="fiche-text text-center">Année de livraison: {{ Investment.annee_de_livraison }}</p>
+    <p class="fiche-text text-center">Ville: {{ Investment.ville }}</p>
+    <p class="fiche-text text-center">Mandataire: {{ Investment.mandataire }}</p>
+    <p class="fiche-text text-center">PPI: {{ Investment.ppi }}</p>
+    <p class="fiche-text text-center">Lycée: {{ Investment.lycee }}</p>
+    <p class="fiche-text text-center">Notification du marché: {{ Investment.notification_du_marche }}</p>
+    <p class="fiche-text text-center">Latitude: {{ Investment.latitude }}</p>
+    <p class="fiche-text text-center">Longitude: {{ Investment.longitude }}</p>
+    <p class="fiche-text text-center">Etat d'avancement: {{ Investment.etat_d_avancement }}</p>
+    <p class="fiche-text text-center">Montant des AP votés en M€: {{ Investment.montant_des_ap_votes_en_meu }}</p>
+    <p class="fiche-text text-center">CAO attribution: {{ Investment.cao_attribution }}</p>
+    <p class="fiche-text text-center">Maîtrise d'œuvre: {{ Investment.maitrise_d_oeuvre }}</p>
+    <p class="fiche-text text-center">Mode de dévolution: {{ Investment.mode_de_devolution }}</p>
+    <p class="fiche-text text-center">Année d'inpidualisation: {{ Investment.annee_d_inpidualisation }}</p>
+    <p class="fiche-text text-center">Enveloppe prév en M€: {{ Investment.enveloppe_prev_en_meu }}</p>
+</div>

@@ -1,7 +1,1 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<button mat-raised-button (click)="initData()">Get all investments</button>
-<app-filter (buttonFilterClicked)="filterData($event)"></app-filter>
-<mat-spinner *ngIf="loading"></mat-spinner>
-<app-grid [data]=rowData [isreadonlyenabled]=true *ngIf="rowData && !loading"></app-grid>
-
 <router-outlet></router-outlet>

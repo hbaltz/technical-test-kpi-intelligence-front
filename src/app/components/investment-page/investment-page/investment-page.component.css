@@ -1,0 +1,14 @@
+.center {text-align: center;}
+
+.ficheInfo {
+    width: 100%;
+    background: white;
+}
+
+.fiche-text {
+    display: block;
+    line-height: 23px;
+    font-size: 100%;
+    text-align: start;
+    color: #222020;
+}

@@ -14,9 +14,11 @@ import { DataGridModule } from "./modules/data-grid/data-grid.module";
 import { HttpClientModule } from "@angular/common/http";
 import { FilterComponent } from './components/filter/filter/filter.component';
 import { FormsModule } from '@angular/forms';
+import { InvestmentPageComponent } from './components/investment-page/investment-page/investment-page.component';
+import { InvestmentsListComponent } from './components/investments-list/investments-list.component';
 
 @NgModule({
-  declarations: [AppComponent, FilterComponent],
+  declarations: [AppComponent, FilterComponent, InvestmentPageComponent, InvestmentsListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
