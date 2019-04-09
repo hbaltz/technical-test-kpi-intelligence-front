@@ -1,0 +1,11 @@
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>City</mat-label>
+    <input matInput [(ngModel)]="city" placeholder="City">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Progress status</mat-label>
+    <input matInput [(ngModel)]="prog_stat" placeholder="Progress status">
+  </mat-form-field>
+  <button mat-raised-button (click)="launchFilter()">Apply filter</button>
+</div>

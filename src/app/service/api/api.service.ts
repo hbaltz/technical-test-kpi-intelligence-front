@@ -19,6 +19,24 @@ export class ApiService {
   }
 
   /**
+   * Get the investments filtered by city and/or progress status
+   * @param city the city's name
+   * @param progress_status the progress status
+   */
+  public getInvestmentsWithFilter(city: string, progress_status: string){
+    let url = `${this.apiURL}/investment`;
+    if (city && progress_status){
+      url += '?city=' + city + '&progress_status=' + progress_status;
+    } else if (city) {
+      url += '?city=' + city;
+    } else {
+      url += '?progress_status=' + progress_status;
+    }
+
+    return this.httpClient.get<Investment[]>(url);
+  }
+
+  /**
    * Get the investments depending on his id
    * @param url the url of the api
    */
