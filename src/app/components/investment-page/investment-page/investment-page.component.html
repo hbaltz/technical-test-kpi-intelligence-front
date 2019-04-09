@@ -1,5 +1,5 @@
 <div class="center"><mat-spinner *ngIf="loading"></mat-spinner></div>
-<div class="ficheInfo" *ngIf="Investment">
+<div class="ficheInfo" *ngIf="Investment && !loading">
     <h1>Fiche investiment n°{{ Investment.id }}</h1>
     <p class="fiche-text text-center"> <span class="label">Identifiant:</span> {{ Investment.id }}</p>
     <p class="fiche-text text-center">Code UAI: {{ Investment.codeuai }}</p>
@@ -21,3 +21,7 @@
     <p class="fiche-text text-center">Année d'inpidualisation: {{ Investment.annee_d_inpidualisation }}</p>
     <p class="fiche-text text-center">Enveloppe prév en M€: {{ Investment.enveloppe_prev_en_meu }}</p>
 </div>
+<div class="ficheInfo" *ngIf="!Investment && !loading">
+    <h1>This investiment doesn't exist</h1>
+</div>
+<button mat-raised-button (click)="goToListInvestment()">Back</button>

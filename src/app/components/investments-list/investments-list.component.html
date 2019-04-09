@@ -1,4 +1,11 @@
 <button mat-raised-button (click)="initData()">Get all investments</button>
 <app-filter (buttonFilterClicked)="filterData($event)"></app-filter>
-<mat-spinner *ngIf="loading"></mat-spinner>
+<div>
+    <mat-form-field appearance="outline">
+        <mat-label>Investment's id</mat-label>
+        <input matInput [(ngModel)]="idInv" placeholder="Investment's id">
+    </mat-form-field>
+    <button mat-raised-button (click)="goToInvestment()">Go to</button>
+</div>
 <app-grid [data]=rowData [isreadonlyenabled]=true *ngIf="rowData && !loading"></app-grid>
+<mat-spinner *ngIf="loading"></mat-spinner>

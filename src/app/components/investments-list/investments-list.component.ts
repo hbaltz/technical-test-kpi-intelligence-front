@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api/api.service';
 import { Investment } from 'src/app/model/investment/investment';
+import { InternalNgModuleRef } from '@angular/core/src/linker/ng_module_factory';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-investments-list',
@@ -13,7 +15,7 @@ export class InvestmentsListComponent {
    * Constructor
    * @param apiService 
    */
-  constructor(private apiService: ApiService){}
+  constructor(private apiService: ApiService, private _router: Router){}
 
   /**
    * The investment to display
@@ -25,6 +27,10 @@ export class InvestmentsListComponent {
    */
   public loading: boolean;
 
+  /**
+   * Investmnet's id
+   */
+  public idInv: number;
 
   /**
    * Get all the investments
@@ -46,6 +52,16 @@ export class InvestmentsListComponent {
       this.rowData = res;
       this.loading = false;
     });  
+  } 
+
+  /**
+   * Redirect user to the invesment using the id
+   */
+  public goToInvestment(){
+    if (this.idInv) {
+      const url = `/investment/${this.idInv}`;
+      this._router.navigate([url]);
+    }
   } 
 
 }

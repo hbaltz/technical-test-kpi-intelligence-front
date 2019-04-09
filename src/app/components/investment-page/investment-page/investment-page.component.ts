@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ApiService } from "src/app/service/api/api.service";
 import { Investment } from 'src/app/model/investment/investment';
 
@@ -24,7 +24,8 @@ export class InvestmentPageComponent {
    */
   constructor(
     private _route: ActivatedRoute,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private _router: Router
   ) {
     this.loading = true;
   }
@@ -43,5 +44,12 @@ export class InvestmentPageComponent {
         this.loading = false;
       }
     });
+  }
+
+  /**
+   * Redirect to the list of investments
+   */
+  public goToListInvestment() {
+    this._router.navigate(['']);
   }
 }
