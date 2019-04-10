@@ -1,8 +1,14 @@
-import { Component } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { ApiService } from "src/app/service/api/api.service";
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Investment } from 'src/app/model/investment/investment';
+import { ApiService } from 'src/app/service/api/api.service';
 
+/**
+ * Manages the page displaying the information about one investment
+ *
+ * @export
+ * @class InvestmentPageComponent
+ */
 @Component({
   selector: "app-investment-page",
   templateUrl: "./investment-page.component.html",

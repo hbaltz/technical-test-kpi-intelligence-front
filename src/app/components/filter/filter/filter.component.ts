@@ -1,5 +1,11 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, EventEmitter, Output } from '@angular/core';
 
+/**
+ *MAnages the filter on city and progress status
+ *
+ * @export
+ * @class FilterComponent
+ */
 @Component({
   selector: "app-filter",
   templateUrl: "./filter.component.html"

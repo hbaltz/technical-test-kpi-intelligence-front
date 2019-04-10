@@ -1,9 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/service/api/api.service';
-import { Investment } from 'src/app/model/investment/investment';
-import { InternalNgModuleRef } from '@angular/core/src/linker/ng_module_factory';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Investment } from 'src/app/model/investment/investment';
+import { ApiService } from 'src/app/service/api/api.service';
 
+/**
+ * Manages the grid of investments
+ *
+ * @export
+ * @class InvestmentsListComponent
+ */
 @Component({
   selector: 'app-investments-list',
   templateUrl: './investments-list.component.html',
@@ -13,7 +18,7 @@ export class InvestmentsListComponent {
 
    /**
    * Constructor
-   * @param apiService 
+   * @param apiService
    */
   constructor(private apiService: ApiService, private _router: Router){}
 
@@ -40,9 +45,9 @@ export class InvestmentsListComponent {
     this.apiService.getInvestments().subscribe((res)=>{
       this.rowData = res;
       this.loading = false;
-    });  
-  }  
-  
+    });
+  }
+
   /**
    * Get investments filtered by city and progress status
    */
@@ -51,8 +56,8 @@ export class InvestmentsListComponent {
     this.apiService.getInvestmentsWithFilter(e.city, e.progress_status).subscribe((res)=>{
       this.rowData = res;
       this.loading = false;
-    });  
-  } 
+    });
+  }
 
   /**
    * Redirect user to the invesment using the id
@@ -62,6 +67,6 @@ export class InvestmentsListComponent {
       const url = `/investment/${this.idInv}`;
       this._router.navigate([url]);
     }
-  } 
+  }
 
 }
